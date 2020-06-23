@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="customers.gui.CustomersScreenController">
+    <children>
+        <HBox fx:id="hBox" layoutX="261.0" layoutY="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox prefHeight="720.0">
+                    <children>
+                        <HBox prefHeight="25.0" prefWidth="922.0">
+                            <children>
+                                <TextField fx:id="searchField" prefHeight="25.0" prefWidth="542.0" promptText="Search a Customer" />
+                                <ChoiceBox fx:id="searchOptions" prefWidth="180.0">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </ChoiceBox>
+                                <Button fx:id="searchButton" alignment="TOP_CENTER" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="180.0" text="Search" textAlignment="CENTER">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="25.0" right="25.0" top="25.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <TableView fx:id="customersTable" minWidth="600.0" prefHeight="600.0" prefWidth="921.0">
+                            <placeholder>
+                                <Label text="No results"/>
+                            </placeholder>
+                            <columns>
+                                <TableColumn fx:id="firstNameCol" minWidth="100.0" prefWidth="130.0" text="First Name" />
+                                <TableColumn fx:id="lastNameCol" minWidth="100.0" prefWidth="130.0" text="Last Name" />
+                                <TableColumn fx:id="addressCol" minWidth="150.0" prefWidth="205.0" text="Address" />
+                                <TableColumn fx:id="postcodeCol" minWidth="80.0" prefWidth="106.0" text="Postcode" />
+                                <TableColumn fx:id="phoneNumberCol" minWidth="100.0" prefWidth="135.0" text="Phone Number" />
+                                <TableColumn fx:id="emailAddressCol" minWidth="190.0" prefWidth="204.0" text="Email Address" />
+                            </columns>
+                            <VBox.margin>
+                                <Insets left="25.0" right="25.0" top="15.0" />
+                            </VBox.margin>
+                        </TableView>
+                        <Label fx:id="tableInfo" prefWidth="912.0" text="Number of rows:" textFill="#8b8b8b">
+                            <VBox.margin>
+                                <Insets left="25.0" top="5.0" />
+                            </VBox.margin>
+                        </Label>
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0">
+                    <children>
+                        <HBox prefHeight="25.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#loadAllCustomers" prefHeight="25.0" prefWidth="115.0" text="Refresh Table">
+                                    <HBox.margin>
+                                        <Insets left="30.0" right="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#clearTable" prefHeight="25.0" prefWidth="115.0" text="Clear Table">
+                                    <HBox.margin>
+                                        <Insets left="5.0" right="30.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <Separator layoutX="10.0" layoutY="448.0" prefWidth="200.0">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                        </Separator>
+                        <TextField fx:id="firstNameField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="283.0" promptText="First Name">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="lastNameField" alignment="TOP_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="283.0" promptText="Last Name">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextArea fx:id="addressField" prefHeight="50.0" prefWidth="200.0" promptText="Address" wrapText="true">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                        </TextArea>
+                        <TextField fx:id="postcodeField" alignment="TOP_LEFT" layoutX="35.0" layoutY="75.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="283.0" promptText="Postcode">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="phoneNumberField" alignment="TOP_LEFT" layoutX="10.0" layoutY="180.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="283.0" promptText="Phone Number">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="emailAddressField" alignment="TOP_LEFT" layoutX="10.0" layoutY="220.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="283.0" promptText="Email Address">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                        </TextField>
+                        <Button fx:id="addButton"  alignment="CENTER" maxWidth="308.0" mnemonicParsing="false" onAction="#addCustomer" prefHeight="50.0" prefWidth="200.0" text="Add Customer" textAlignment="CENTER">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Separator prefWidth="200.0">
+                            <VBox.margin>
+                                <Insets bottom="15.0" left="5.0" right="5.0" top="15.0" />
+                            </VBox.margin>
+                        </Separator>
+                        <Button fx:id="editButton"  alignment="CENTER" layoutX="10.0" layoutY="300.0" maxWidth="308.0" mnemonicParsing="false" onAction="#editCustomer" prefHeight="50.0" prefWidth="298.0" text="Edit Customer" textAlignment="CENTER" />
+                        <Separator layoutX="15.0" layoutY="340.0" prefWidth="200.0">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                        </Separator>
+                        <Button fx:id="deleteButton"  alignment="CENTER" layoutX="10.0" layoutY="358.0" maxWidth="308.0" mnemonicParsing="false" onAction="#deleteCustomer" prefHeight="50.0" prefWidth="298.0" text="Delete Customer" textAlignment="CENTER">
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                    <HBox.margin>
+                        <Insets right="20.0" />
+                    </HBox.margin>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

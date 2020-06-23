@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="616.0" prefWidth="973.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="common.AdminScreenController">
+   <children>
+      <TextField fx:id="searchField" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="494.0" promptText="Search a System User" />
+      <ChoiceBox fx:id="searchOptions" layoutX="516.0" layoutY="10.0" prefHeight="27.0" prefWidth="165.0" />
+      <Button fx:id="searchButton" alignment="TOP_CENTER" layoutX="728.0" layoutY="10.0" mnemonicParsing="false"  prefHeight="25.0" prefWidth="180.0" text="Search" textAlignment="CENTER" />
+      <TableView layoutX="14.0" layoutY="69.0" prefHeight="479.0" prefWidth="670.0">
+        <columns>
+          <TableColumn prefWidth="208.0" text="First Name" />
+            <TableColumn prefWidth="176.0" text="Last Name" />
+            <TableColumn prefWidth="189.0" text="Password" />
+            <TableColumn prefWidth="96.0" text="Admin" />
+        </columns>
+      </TableView>
+      <TextField fx:id="firstNameField" alignment="TOP_LEFT" layoutX="704.0" layoutY="63.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="255.0" promptText="First Name" />
+      <TextField fx:id="lastNameField" alignment="TOP_LEFT" layoutX="704.0" layoutY="111.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="255.0" promptText="Last Name" />
+      <Button fx:id="addButton" alignment="CENTER" layoutX="730.0" layoutY="264.0" maxWidth="308.0" mnemonicParsing="false"  prefHeight="50.0" prefWidth="200.0" text="Add  User" textAlignment="CENTER" />
+      <Button fx:id="editButton" alignment="CENTER" layoutX="730.0" layoutY="335.0" maxWidth="308.0" mnemonicParsing="false"  prefHeight="50.0" prefWidth="200.0" text="Edit  User" textAlignment="CENTER" />
+      <Button fx:id="deleteButton" alignment="CENTER" layoutX="732.0" layoutY="411.0" maxWidth="308.0" mnemonicParsing="false"  prefHeight="50.0" prefWidth="200.0" text="Delete  User" textAlignment="CENTER" />
+      <TextField fx:id="lastNameField1" alignment="TOP_LEFT" layoutX="703.0" layoutY="158.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="27.0" prefWidth="255.0" promptText="Password" />
+      <TextField layoutX="704.0" layoutY="206.0" prefHeight="27.0" prefWidth="255.0" promptText="Admin(Y/N)" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="309.0" prefWidth="404.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="59.0" layoutY="27.0" text="Vehicle Future Bookings" textFill="#a10000">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView layoutX="1.0" layoutY="81.0" prefHeight="263.0" prefWidth="402.0">
+        <columns>
+          <TableColumn prefWidth="126.0" text="ID" />
+          <TableColumn minWidth="0.0" prefWidth="138.0" text="Type" />
+            <TableColumn prefWidth="150.0" text="Date" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
